@@ -24,4 +24,16 @@ dataset$Purchased = factor(dataset$Purchased,
                          labels = c(0, 1))
 
 # Splitting the data set in training and test set
-install.packages('caTools')
+# install.packages('caTools') # install library
+# library(caTools) # import library in module / code
+
+set.seed(123)
+split = sample.split(dataset$Purchased, SplitRatio = 0.8)
+training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
+
+# Feature scaling
+
+training_set[, 2:3] = scale(training_set[, 2:3])
+test_set[, 2:3] = scale(test_set[, 2:3])
+

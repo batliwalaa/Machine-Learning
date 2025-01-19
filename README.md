@@ -1,6 +1,6 @@
 # Machine-Learning
 
-ML A-Z course (Udemy) - Python &amp; R
+ML A-Z course (Udemy) - Python
 
 ## Feature Scaling
 
